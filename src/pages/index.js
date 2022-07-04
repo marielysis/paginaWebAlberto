@@ -32,16 +32,6 @@ const Index = () => {
             <ImagenAlberto />
             <ContenidoInicio /> 
 
-            <h2
-        css={css`
-          text-align: center;
-          margin-top: 5rem;
-          font-size: 3rem;
-        `}
-      >
-        Mis Planes  
-      </h2> 
-
             <ListadoPlanes>
         {planes.map(plan => (
           <PlanPreview

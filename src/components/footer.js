@@ -1,7 +1,7 @@
 import React from 'react';
 import Navegacion from './navegacion';
 import styled from '@emotion/styled';
-import{ Link } from 'gatsby';
+import{ Link, useStaticQuery, graphql } from 'gatsby';
 
 const EnlaceHome = styled(Link)`
     color: #FFF;
@@ -50,15 +50,26 @@ const Reserv = styled.p`
 
 const Footer = () => {
   const year = new Date().getFullYear();
+
+// consultar el logo.svg
+
+const { logo } = useStaticQuery( graphql `
+query {
+    logo: file(relativePath: {eq: "logo.svg"}){
+          publicURL
+    }
+  }
+`);
+
   return (
     <>
       <Foter>
         <FoterDiv>
           <Navegacion />
-          <EnlaceHome to="/">AP</EnlaceHome>
+          <EnlaceHome to="/"><img src={logo.publicURL} alt='Logotipo Alberto Padron Trainer'/></EnlaceHome>
         </FoterDiv>
 
-        <FoterDivdos>
+        {/* <FoterDivdos>
           <a href="https://www.instagram.com/albertopadrontrainer/">
             <svg
               id="Grupo_182"
@@ -125,7 +136,7 @@ const Footer = () => {
               />
             </svg>
           </a>
-        </FoterDivdos>
+        </FoterDivdos> */}
       </Foter>
 
       <Reserv>

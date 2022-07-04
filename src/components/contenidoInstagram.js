@@ -26,10 +26,16 @@ border: 1px solid #e1e1e1;
 margin-bottom: 2rem;
 `;
 
+const Titulo = styled.h3`
+text-align: center;
+font-size: 4rem;
+margin-top: 4rem;
+`;
+
 const ContenidoInstagram = () => {
   const resultado = useStaticQuery(graphql`
   query {
-    allInstaNode {
+    allInstaNode(limit: 9) {
       edges {
         node {
           caption
@@ -54,11 +60,7 @@ const ContenidoInstagram = () => {
 
   return (
       <>
-    <h3
-    css={css`
-      font-size: 3rem;
-    `}
-  >Post de Instagram</h3>
+    <Titulo>Post de Instagram</Titulo>
     <InstagramPost>
       {insta.map(inst => (
         <DivFotoIg>

@@ -3,6 +3,14 @@ import { graphql } from 'gatsby';
 import Layout from './layout';
 import Img from 'gatsby-image';
 import { css } from '@emotion/react';
+import styled from "@emotion/styled";
+
+
+const Titulo = styled.h3`
+
+font-size: 2rem;
+margin-top: 4rem;
+`;
 
 export const query = graphql`
 query($slug: String!) {
@@ -34,12 +42,7 @@ const Planes = ({data: { allDatoCmsPlan: { nodes } }}) => {
       width: 95%;
   `}
     >
-      <h1
-        css={css`
-        text-align: center;
-        margin-top: 4rem;
-    `}
-      >{titulo}</h1>
+      <Titulo>{titulo}</Titulo>
       <p>{descripcion}</p>
       <Img 
         fluid={imagen.fluid} 

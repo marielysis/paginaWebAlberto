@@ -1,16 +1,22 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {css} from '@emotion/react';
 
-const TextoSobremi = styled.div`
+const Titulo = styled.h2`
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 4rem;
+`
+
+const YoutubeVideos = styled.div`
     padding-top: 4rem;
     max-width: 1200px;
     width: 95%;
     margin: 0 auto;
     @media (min-width: 768px) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-columns: repeat(3, 1fr) ;
         column-gap: 4rem;
+        row-gap: 2rem;
     }
     p {
         line-height: 2;
@@ -19,12 +25,6 @@ const TextoSobremi = styled.div`
     }
 `;
 
-const YoutubeVideos = styled.div`
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 95%;
-  margin: 2rem auto 0 auto;
-`
 
 const Contenidovideos = () => {
 
@@ -32,17 +32,9 @@ const Contenidovideos = () => {
   return ( 
 
     <>
-      <h2
-
-        css={css`
-        text-align: center;
-        font-size: 4rem;
-        margin-top: 4rem;
-    `}
-
-      >Galeria de Ejercicios</h2>
-      <TextoSobremi>
-        <YoutubeVideos>
+      <Titulo>Galeria de Ejercicios</Titulo>
+      <YoutubeVideos>
+        
         <iframe width="350" height="315" src="https://www.youtube.com/embed/-3liDfD8oZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="350" height="315" src="https://www.youtube.com/embed/fwsnE_99JP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="350" height="315" src="https://www.youtube.com/embed/xkmSs1Ud9l4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -76,8 +68,8 @@ const Contenidovideos = () => {
         <iframe width="350" height="315" src="https://www.youtube.com/embed/Sekn_hWMinE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="350" height="315" src="https://www.youtube.com/embed/OFeJII_Be4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="350" height="315" src="https://www.youtube.com/embed/RL4x3otURNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </YoutubeVideos>
-      </TextoSobremi>
+        
+      </YoutubeVideos>
     </>
 
    );

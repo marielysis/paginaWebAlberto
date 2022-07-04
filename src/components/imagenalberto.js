@@ -14,12 +14,16 @@ const TextoImagen = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
-    align-items: center;
+    align-items: left;
     justify-content: flex-start;
+    padding: 2rem;
 
     h1 {
-      font-size: 6rem;
-    
+      font-size: 6rem;    
+    }
+
+    h2 {
+      margin-top: 2rem;
     }
 `;
 const Cta = styled.a`
@@ -32,6 +36,7 @@ const Cta = styled.a`
   border-radius: 10px;
   text-transform: uppercase;
   font-weight: 700;
+  width: 250px;
 `;
 
 const ImagenAlberto = () => {
@@ -52,8 +57,8 @@ const ImagenAlberto = () => {
   <ImageBackground tag="section" fluid={image.sharp.fluid} fadeIn="soft">
     <TextoImagen>
       <h1>ALBERTO PADRÓN TRAINER</h1>
-      <h2>Transformando cuerpos y mentes</h2>
-      <Cta href="#">Comienza ahora</Cta>
+      <h2>Transforma tu cuerpo y tu mente</h2>
+      <Cta href="#">Quiero entrenar</Cta>
     </TextoImagen>
   </ImageBackground> 
   );
