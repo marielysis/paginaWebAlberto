@@ -16,14 +16,16 @@ const TextoImagen = styled.div`
     flex: 1;
     align-items: left;
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 1rem;
 
     h1 {
-      font-size: 6rem;    
+      font-size: 6rem; 
+      margin-left: 4rem;   
     }
 
     h2 {
       margin-top: 2rem;
+      margin-left: 4rem;
     }
 `;
 const Cta = styled.a`
@@ -31,6 +33,7 @@ const Cta = styled.a`
   background: #A2E00F;
   padding: 20px 40px;
   margin-top: 24px;
+  margin-left: 4rem;
   color: #000;
   text-decoration: none;
   border-radius: 10px;
@@ -58,7 +61,7 @@ const ImagenAlberto = () => {
     <TextoImagen>
       <h1>ALBERTO PADRÓN TRAINER</h1>
       <h2>Transforma tu cuerpo y tu mente</h2>
-      <Cta href="#">Quiero entrenar</Cta>
+      <Cta href="https://wa.link/nfr6r7">Quiero entrenar</Cta>
     </TextoImagen>
   </ImageBackground> 
   );

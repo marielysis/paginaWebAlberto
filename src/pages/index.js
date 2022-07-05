@@ -8,6 +8,7 @@ import usePlanes from '../hooks/use-planes';
 import PlanPreview from '../components/planPreview';
 import ContenidoInstagram from '../components/contenidoInstagram';
 import ContenidoYoutube from '../components/contenidoYoutube';
+import ContenidoTestimonios from '../components/contenidoTestimonios';
 
 
 const ListadoPlanes = styled.ul`
@@ -42,6 +43,7 @@ const Index = () => {
       </ListadoPlanes> 
       <ContenidoInstagram />
       <ContenidoYoutube />
+      <ContenidoTestimonios />
            
               
         </Layout>
